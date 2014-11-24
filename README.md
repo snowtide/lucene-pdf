@@ -22,10 +22,21 @@ lucene-pdf is suitable for use with JDK 1.5+, and is tested against the latest
 releases of each major revision of Lucene core (1.x, 2.x, 3.x, an 4.x). See the
 project file for the exact versions used under test.
 
-## Usage
+While lucene-pdf is suitable for many typical Lucene PDF indexing jobs, there
+may be aspects of your project's requirements that it cannot meet (e.g. taking
+advantage of some of the more esoteric document indexing parameters available in more
+recent versions of Lucene). In that case, its source can serve as a useful
+starting point, exhibiting how PDF data can be extracted using
+[PDFxStream](http://snowtide.com) and turned into Lucene Documents; please feel
+free to import it into your projects and modify it as needed to suit your needs.
 
-For a detailed tutorial, refer to
-[Indexing PDF Documents with Lucene and PDFxStream](http://www.snowtide.com/help/indexing-pdf-documents-with-lucene-and-pdfxstream).
+## Documentation
+
+* A detailed tutorial is available:
+  [Indexing PDF Documents with Lucene and PDFxStream](http://www.snowtide.com/help/indexing-pdf-documents-with-lucene-and-pdfxstream)
+* Javadocs are available at [http://snowtide.github.io/lucene-pdf](http://snowtide.github.io/lucene-pdf)
+
+## Example usage
 
 Given a PDF file stored on disk at `/tmp/foo.pdf`, this Java code will use
 lucene-pdf to construct a Lucene `org.apache.lucene.document.Document` populated
@@ -75,7 +86,7 @@ Document luceneDocument = LucenePDFDocumentFactory.buildPDFDocument(PDF.open(f),
 Lucene fields and documents are created, including setting storage,
 tokenization, and indexing/analysis flags. See
 [Indexing PDF Documents with Lucene and PDFxStream](http://www.snowtide.com/help/indexing-pdf-documents-with-lucene-and-pdfxstream)
-and the [lucene-pdf javadoc]() for details.
+and the [lucene-pdf javadoc](http://snowtide.github.io/lucene-pdf) for details.
 
 ## License
 
