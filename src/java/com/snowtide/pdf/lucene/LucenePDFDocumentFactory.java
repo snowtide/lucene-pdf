@@ -34,6 +34,8 @@ import java.util.Map;
  * the default configuration of instances of that class.
  * </p>
  * 
+ * @see <a href="http://www.snowtide.com/help/indexing-pdf-documents-with-lucene-and-pdfxstream">Indexing PDF
+ * Documents with Lucene and PDFxStream</a> for usage details
  * @version ©2004-2014 Snowtide, http://snowtide.com, licensed under MIT. See LICENSE in the top level of the
  * <a href="https://github.com/snowtide/lucene-pdf">lucene-pdf</a> project directory.
  */
