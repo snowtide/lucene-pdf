@@ -49,8 +49,9 @@ import org.apache.lucene.document.Document;
 
 // ....
 
-File f = new File("/tmp/foo.pdf");
-Document luceneDocument = LucenePDFDocumentFactory.buildPDFDocument(PDF.open(f));
+com.snowtide.pdf.Document pdf = PDF.open(new File("/tmp/foo.pdf"));
+Document luceneDocument = LucenePDFDocumentFactory.buildPDFDocument(pdf);
+pdf.close();
 ```
 
 `luceneDocument` can then be added to a Lucene index.
@@ -79,7 +80,10 @@ LucenePDFConfiguration config = new LucenePDFConfiguration();
 config.setBodyTextFieldName("mainText");
 config.setMetadataFieldMapping("Author", "document_author");
 config.setMetadataFieldMapping("Title", "document_title");
-Document luceneDocument = LucenePDFDocumentFactory.buildPDFDocument(PDF.open(f), config);
+
+com.snowtide.pdf.Document pdf = PDF.open(new File("/tmp/foo.pdf"));
+Document luceneDocument = LucenePDFDocumentFactory.buildPDFDocument(pdf, config);
+pdf.close();
 ```
 
 `LucenePDFConfiguration` provides a number of additional ways to control how
