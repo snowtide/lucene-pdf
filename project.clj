@@ -1,4 +1,4 @@
-(defproject com.snowtide/lucene-pdf "3.0.0-SNAPSHOT"
+(defproject com.snowtide/lucene-pdf "3.0.0"
   :description "A library enabling easy Lucene indexing of PDF text and metadata via integration with PDFxStream"
   :url "http://github.com/snowtide/lucene-pdf"
   :license {:name "MIT"
